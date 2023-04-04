@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "name": "fjhvihb",
+      "email": "fghfh@bkb.com",
+      "children": false,
+      "permissions": false,
+      "id": 1
+    },
+    {
+      "name": "Alex",
+      "email": "fghfh@bkb.com",
+      "children": true,
+      "permissions": false,
+      "id": 2
+    },
+    {
+      "name": "Alex",
+      "email": "ale123@mail.ru",
+      "children": true,
+      "permissions": false,
+      "id": 3
+    }
+  ]
+}
