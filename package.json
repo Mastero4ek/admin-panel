@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack --mode=production",
     "watch": "webpack --watch --mode=development",
-    "server": "json-server --watch db/db.json --port=4545"
+    "server": "json-server --watch db/db.json --port=4545",
+    "start": "webpack serve --mode=development --open"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,7 @@
   },
   "devDependencies": {
     "webpack": "^5.65.0",
-    "webpack-cli": "^4.9.1"
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.13.2"
   }
 }
