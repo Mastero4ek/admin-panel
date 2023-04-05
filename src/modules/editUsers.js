@@ -13,6 +13,8 @@ export const editUsers = () => {
                 id = tr.dataset.key
 
             userService.getUser(id).then((user) => {
+                if (!user) return
+
                 nameInput.value = user.name
                 emailInput.value = user.email
                 childrenInput.value = user.children
@@ -36,7 +38,11 @@ export const editUsers = () => {
             }
 
             userService.editUser(id, user).then(() => {
+                if (!id || !user) return
+
                 userService.getUsers().then(users => {
+                    if (!users) return
+
                     render(users)
                     form.reset()
                     form.removeAttribute('data-method')

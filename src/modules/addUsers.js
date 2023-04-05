@@ -19,6 +19,8 @@ export const addUsers = () => {
 
             userService.addUser(user).then(() => {
                 userService.getUsers().then(users => {
+                    if (!users) return
+
                     render(users)
                     form.reset()
                 })

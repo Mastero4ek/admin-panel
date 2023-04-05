@@ -7,18 +7,24 @@ export const filterUsers = () => {
 
     btnIsChildren.addEventListener('click', () => {
         userService.filterUsers('children').then(users => {
+            if (!users) return
+
             render(users)
         })
     })
 
     btnIsPermissions.addEventListener('click', () => {
         userService.filterUsers('permissions').then(users => {
+            if (!users) return
+
             render(users)
         })
     })
 
     btnIsAll.addEventListener('click', () => {
         userService.getUsers().then(users => {
+            if (!users) return
+
             render(users)
         })
     })

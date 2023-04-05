@@ -11,7 +11,11 @@ export const removeUsers = () => {
                 id = tr.dataset.key
 
             userService.removeUser(id).then(() => {
+                if (!id) return
+
                 userService.getUsers().then(users => {
+                    if (!users) return
+
                     render(users)
                 })
             })

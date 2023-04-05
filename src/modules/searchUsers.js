@@ -6,6 +6,8 @@ export const searchUsers = () => {
 
     const debounceSearch = debounce(() => {
         userService.getSearchUsers(input.value).then(users => {
+            if (!users) return
+
             render(users)
         })
     }, 500)
